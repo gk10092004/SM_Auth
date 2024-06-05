@@ -17,6 +17,9 @@ app.post("/signup",(req,res)=>{
     .then(user => res.json(user))
     .catch(err => res.json(err))
 })
+app.get("/signup",(req,res)=>{
+    res.send("signup");
+})
 //here this send data in database User
 
 //from here to 
