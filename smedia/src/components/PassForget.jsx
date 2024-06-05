@@ -68,7 +68,7 @@ const PassForget = () => {
         }
     }
     const goHome = () => {
-        navigate("https://sm-auth-11s9-server-ei2i5p00p-gaurav-kumars-projects-5d82833b.vercel.app/")
+        navigate("/")
     }
     
   return (
