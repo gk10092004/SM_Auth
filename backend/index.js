@@ -7,7 +7,7 @@ app.use(cors())
 const userRoute = require('./routes/userRoute');
 app.use('/api',userRoute);
 
-require('./db/connection')
+require('./db/connection.js')
 const User = require('./Models/User')
 const UserOtp = require('./Models/VerifyOtp')
 app.post("/signup",(req,res)=>{
