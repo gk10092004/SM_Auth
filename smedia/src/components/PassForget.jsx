@@ -18,7 +18,7 @@ const PassForget = () => {
     const navigate = useNavigate();
     const SendOtp = async(e) => {
         e.preventDefault();
-        axios.post('http://localhost:3000/api/send-otp',{email})
+        axios.post('https://sm-auth-backend-ihtnc6ux3-gaurav-kumars-projects-5d82833b.vercel.app/api/send-otp',{email})
         .then(async(result) => {
             if(result.data == "email found"){
                 setOtpbtn("Resend Otp");
@@ -26,7 +26,7 @@ const PassForget = () => {
                 EnterOtp.current.style.display = "flex";
                 ReadOnly.current.setAttribute('readonly','readonly');
                 ReadOnly.current.style.color = "#5a5a5a";
-                let data = await fetch("http://localhost:3000/api/send-otp")
+                let data = await fetch("https://sm-auth-backend-ihtnc6ux3-gaurav-kumars-projects-5d82833b.vercel.app/api/send-otp")
                 let AllData = await data.json();
                 let len = AllData.length;
                 for(let i=len-1;i>=0;i--){
@@ -57,7 +57,7 @@ const PassForget = () => {
     const UpdatePass = (e) => {
         e.preventDefault();
         if(password == confirmPass){
-            axios.post('http://localhost:3000/api/password-reset',{email,password})
+            axios.post('https://sm-auth-backend-ihtnc6ux3-gaurav-kumars-projects-5d82833b.vercel.app/api/password-reset',{email,password})
             .then(result => {
                 navigate('/login')
             })

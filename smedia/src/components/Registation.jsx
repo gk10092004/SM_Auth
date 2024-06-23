@@ -10,7 +10,7 @@ const Registation = () => {
     const navigate = useNavigate()
     const collectData = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3000/signup',{name,email,password})
+        axios.post('https://sm-auth-backend-ihtnc6ux3-gaurav-kumars-projects-5d82833b.vercel.app/signup',{name,email,password})
         .then(result => {
             navigate('/login')
         })
