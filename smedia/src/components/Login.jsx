@@ -9,7 +9,7 @@ const Login = () => {
   const navigate = useNavigate()
   const LoginToHOme = (e) => {
     e.preventDefault();
-    axios.post('https://sm-auth-backend-ihtnc6ux3-gaurav-kumars-projects-5d82833b.vercel.app/login',{email,password})
+    axios.post('https://sm-auth-backend.vercel.app/login',{email,password})
     .then(result => {
         if(result.data == "Successfully"){
           navigate('/feed-home-page')
