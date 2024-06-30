@@ -10,7 +10,7 @@ const Registation = () => {
     const navigate = useNavigate()
     const collectData = (e) => {
         e.preventDefault();
-        axios.post('https://sm-auth-backend-fguta11z6-gaurav-kumars-projects-5d82833b.vercel.app/signup',{name,email,password})
+        axios.post('https://sm-auth-backend.vercel.app/signup',{name,email,password})
         .then(result => {
             navigate('/login')
         })
