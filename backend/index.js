@@ -4,6 +4,7 @@ const cors = require('cors')
 const app = express();
 app.use(express.json());
 app.use(cors({ origin: 'https://sm-auth-frontend-7znzvne40-gaurav-kumars-projects-5d82833b.vercel.app' }));
+app.options('*', cors());
 const userRoute = require('./routes/userRoute');
 app.use('/api',userRoute);
 
