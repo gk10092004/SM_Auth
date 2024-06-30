@@ -3,7 +3,14 @@ const express = require('express');
 const cors = require('cors')
 const app = express();
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: 'https://sm-auth-frontend.vercel.app',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 const userRoute = require('./routes/userRoute');
 app.use('/api',userRoute);
 
